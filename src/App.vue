@@ -25,11 +25,13 @@
                   <v-slider v-model="slider" :thumb-size="16" thumb-label="always"></v-slider>
                 </v-col>
                 <v-col cols="3">
-                  <v-text-field v-model="shares" label="# of Shares" filled></v-text-field>
+                  <v-subheader class="pl-0">Buy vs Sell Price</v-subheader>
+                  <v-slider v-model="weight" :thumb-size="16" thumb-label></v-slider>
                 </v-col>
                 <v-col cols="3">
-                  <v-btn>placeholder</v-btn>
+                  <v-text-field v-model="shares" label="# of Shares" filled></v-text-field>
                 </v-col>
+
                 <v-col cols="3">
                   <v-btn>placeholder</v-btn>
                 </v-col>
@@ -52,7 +54,7 @@
                 </v-card-text>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn @click="process">Submit</v-btn>
+                  <v-btn @click="process">Calculate</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -73,13 +75,19 @@
                     <v-list-item>
                       <v-list-item-title>Total Sell: {{ prettyTotals(returned.src.sell) }}</v-list-item-title>
                     </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title>Adjusted Value: {{ prettyTotals(((100-weight)/100*returned.src.buy + (weight/100*returned.src.sell))) }}</v-list-item-title>
+                    </v-list-item>
                   </v-col>
                   <v-col>
                     <v-list-item>
-                      <v-list-item-title>Adjusted Total: {{ prettyTotals(returned.src.buy/safeNumber(slider)) }}</v-list-item-title>
+                      <v-list-item-title>Final Total: {{ prettyTotals(returned.src.buy/safeNumber(slider)) }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
                       <v-list-item-title>Per Share: {{ prettyTotals(prettyTotals(returned.src.buy/safeNumber(slider))/safeNumber(shares)) }}</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title>Total Corp Tax: {{ prettyTotals(prettyTotals(returned.src.buy/safeNumber(100-slider))) }}</v-list-item-title>
                     </v-list-item>
                   </v-col>
                 </v-row>
@@ -103,11 +111,12 @@ export default {
   data: () => ({
     returned: "",
     slider: 10,
-    shares: 1
+    shares: 1,
+    weight: 50
   }),
   methods: {
     safeNumber(num) {
-      return num | 1
+      return num | 1;
     },
     prettyTotals(val) {
       let wrk = val * 100;
