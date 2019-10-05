@@ -22,7 +22,7 @@
               <v-card-actions>
                 <v-col cols="3">
                   <v-subheader class="pl-0">Corp Tax Rate</v-subheader>
-                  <v-slider v-model="slider" :thumb-size="16" thumb-label="always"></v-slider>
+                  <v-slider v-model="tax" :thumb-size="16" thumb-label="always"></v-slider>
                 </v-col>
                 <v-col cols="3">
                   <v-subheader class="pl-0">Buy vs Sell Price</v-subheader>
@@ -33,7 +33,7 @@
                 </v-col>
 
                 <v-col cols="3">
-                  <v-btn>placeholder</v-btn>
+                  <v-btn @click="updateModifiers">Update Modifiers</v-btn>
                 </v-col>
               </v-card-actions>
             </v-card>
@@ -70,25 +70,31 @@
                 <v-row>
                   <v-col>
                     <v-list-item>
-                      <v-list-item-title>Total Buy: {{ prettyTotals(returned.src.buy) }}</v-list-item-title>
+                      <v-list-item-title>Total Buy: {{ prettyTotals(output.buy) }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Total Sell: {{ prettyTotals(returned.src.sell) }}</v-list-item-title>
+                      <v-list-item-title>Total Sell: {{ prettyTotals(output.sell) }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Adjusted Value: {{ prettyTotals(((100-weight)/100*returned.src.buy + (weight/100*returned.src.sell))) }}</v-list-item-title>
+                      <v-list-item-title>Adjusted Value: {{ output.adjusted }}</v-list-item-title>
                     </v-list-item>
                   </v-col>
                   <v-col>
                     <v-list-item>
-                      <v-list-item-title>Final Total: {{ prettyTotals(returned.src.buy/safeNumber(slider)) }}</v-list-item-title>
+                      <v-list-item-title>Final Total: {{ output.total }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Per Share: {{ prettyTotals(prettyTotals(returned.src.buy/safeNumber(slider))/safeNumber(shares)) }}</v-list-item-title>
+                      <v-list-item-title>Per Share: {{ output.perShare }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Total Corp Tax: {{ prettyTotals(prettyTotals(returned.src.buy/safeNumber(100-slider))) }}</v-list-item-title>
+                      <v-list-item-title>Total Corp Tax: {{ output.taxTotal }}</v-list-item-title>
                     </v-list-item>
+                    <!-- <v-list-item>
+                      <v-list-item-title>Total Test: {{ output.buy }}</v-list-item-title>
+                    </v-list-item>
+                    <v-list-item>
+                      <v-list-item-title>Total Test2: {{ output.adjusted }}</v-list-item-title>
+                    </v-list-item> -->
                   </v-col>
                 </v-row>
               </v-card-text>
@@ -109,10 +115,18 @@ export default {
     // HelloWorld,
   },
   data: () => ({
-    returned: "",
-    slider: 10,
+    returned: false,
+    tax: 10,
     shares: 1,
-    weight: 50
+    weight: 50,
+    output: {
+      buy: 0,
+      sell: 0,
+      adjusted: 0,
+      total: 0,
+      perShare: 0,
+      taxTotal: 0
+    }
   }),
   methods: {
     safeNumber(num) {
@@ -122,6 +136,17 @@ export default {
       let wrk = val * 100;
       wrk = Math.round(wrk);
       return wrk / 100;
+    },
+    updateModifiers() {
+      // let { buy, sell, adjusted, total, perShare, taxTotal } = this.output
+      this.output.adjusted = this.prettyTotals(((100-this.weight)/100*this.output.buy + (this.weight/100*this.output.sell)))
+      this.output.total = this.prettyTotals(this.output.adjusted/this.safeNumber(this.tax))
+      this.output.perShare = this.prettyTotals(this.output.adjusted/this.safeNumber(this.tax)/this.safeNumber(this.shares))
+      this.output.taxTotal = this.prettyTotals(this.output.adjusted/this.safeNumber(100-this.tax))
+    },
+    setPrices(src) {
+      this.output.buy = src.buy
+      this.output.sell = src.sell
     },
     process() {
       fetch("https://node1.squirrellogic.com/", {
@@ -136,7 +161,9 @@ export default {
         .then(res => res.json())
         // .then(res => res.text())
         .then(res => {
-          this.returned = res;
+          this.setPrices(res.src)
+          this.updateModifiers()
+          this.returned = true
         });
     }
   }
