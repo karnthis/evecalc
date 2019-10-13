@@ -1,0 +1,93 @@
+<template>
+  <div id="topbar">
+    <!-- <v-toolbar> -->
+      <v-app-bar app>
+        <v-toolbar-title class="headline text-uppercase">
+          <span>EVE|</span>
+          <span class="font-weight-light">Superhuman Scouts</span>
+        </v-toolbar-title>
+        <v-spacer></v-spacer>
+        <!-- <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank"> -->
+        <span class="mr-2">Salvage Share Calculator</span>
+        <!-- </v-btn> -->
+      <!-- </v-app-bar> -->
+      <template v-slot:extension>
+        <v-spacer></v-spacer>
+        <v-toolbar-items>
+          <v-btn to="/">Home</v-btn>
+          <v-btn to="/contracts">Contracts</v-btn>
+          <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Submit Request</v-btn>
+          <v-btn to="/calendar">Calendar</v-btn>
+          <v-btn to="/share-calc">Share Calculator</v-btn>
+          <!-- <v-menu>
+            <template v-slot:activator="{on}">
+              <v-btn v-on="on">Manage</v-btn>
+            </template>
+            <v-list>
+              <v-list-tile>
+                <router-link to="/inventory">Inventory</router-link>
+              </v-list-tile>
+              <v-list-tile>
+                <router-link to="/eligibility">Eligibility</router-link>
+              </v-list-tile>
+              <v-list-tile>
+                <router-link to="/myorg">Organization</router-link>
+              </v-list-tile>
+            </v-list>
+          </v-menu>-->
+        </v-toolbar-items>
+        <v-spacer></v-spacer>
+      </template>
+      <v-spacer></v-spacer>
+      <v-toolbar-side-icon></v-toolbar-side-icon>
+      </v-app-bar>
+
+    <!-- </v-toolbar> -->
+  </div>
+</template>
+
+<script>
+// import { mapActions, mapGetters } from "vuex";
+// import UserInfo from "@/components/UserInfo.vue";
+
+export default {
+  name: "topbar",
+  methods: {
+    // ...mapActions(["fetchTodos", "deleteTodo", "updateTodo"]),
+    onDblClick(todo) {
+      const updTodo = {
+        id: todo.id,
+        title: todo.title,
+        completed: !todo.completed
+      };
+      this.updateTodo(updTodo);
+    }
+  },
+  components: {
+    // UserInfo
+  },
+
+  // computed: {
+  // 	...mapGetters(["checkCurrUser","checkMyOrg"])
+  // }
+  created() {
+    // this.fetchTodos();
+  }
+};
+</script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+/* #topbar {
+  padding: 10px;
+  background-color: limegreen;
+  display: grid;
+  grid-template-columns: 250px 1fr 250px;
+}
+.nav {
+  display: grid;
+  grid-template-columns: repeat(7, max-content);
+  justify-content: space-evenly;
+  column-gap: 2ch;
+} */
+</style>
