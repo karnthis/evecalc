@@ -137,7 +137,7 @@ export default {
   }),
   methods: {
     safeNumber(num) {
-      return num | 1;
+      return num || 1;
     },
     prettyTotals(val) {
       let wrk = val * 100;
@@ -156,15 +156,15 @@ export default {
           (this.weight / 100) * this.output.sell
       );
       this.output.total = this.prettyTotals(
-        this.output.adjusted / this.safeNumber(this.tax)
+        this.output.adjusted * this.safeNumber((100 - this.tax) / 100)
       );
       this.output.perShare = this.prettyTotals(
-        this.output.adjusted /
-          this.safeNumber(this.tax) /
+        (this.output.adjusted *
+          this.safeNumber((100 - this.tax) / 100)) /
           this.safeNumber(this.shares)
       );
       this.output.taxTotal = this.prettyTotals(
-        this.output.adjusted / this.safeNumber(100 - this.tax)
+        this.output.adjusted * (this.tax / 100)
       );
     },
     setPrices(src) {
