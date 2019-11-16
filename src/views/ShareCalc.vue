@@ -172,7 +172,7 @@ export default {
       this.output.sell = src.sell;
     },
     process() {
-      fetch("https://node1.squirrellogic.com/", {
+      fetch("https://api.squirrellogic.com/evepraisal", {
         method: "POST",
         mode: "cors",
         headers: {
