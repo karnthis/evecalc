@@ -1,25 +1,28 @@
 <template>
   <div id="topbar">
-    <!-- <v-toolbar> -->
-      <v-app-bar app>
+    <v-toolbar dense fixed>
+      <!-- <v-app-bar app> -->
         <v-toolbar-title class="headline text-uppercase">
           <span>EVE|</span>
           <span class="font-weight-light">Superhuman Scouts</span>
         </v-toolbar-title>
-        <v-spacer></v-spacer>
+        <!-- <v-spacer></v-spacer> -->
         <!-- <v-btn text href="https://github.com/vuetifyjs/vuetify/releases/latest" target="_blank"> -->
-        <span class="mr-2">Salvage Share Calculator</span>
+        <!-- <span class="mr-2">Salvage Share Calculator</span> -->
         <!-- </v-btn> -->
-      <!-- </v-app-bar> -->
-      <template v-slot:extension>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn to="/">Home</v-btn>
-          <v-btn to="/contracts">Contracts</v-btn>
-          <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Submit Request</v-btn>
-          <v-btn to="/calendar">Calendar</v-btn>
-          <v-btn to="/share-calc">Share Calculator</v-btn>
-          <!-- <v-menu>
+        <!-- </v-app-bar> -->
+        <!-- <template v-slot:extension> -->
+          <v-spacer></v-spacer>
+          <v-toolbar-items>
+            <v-btn to="/">Home</v-btn>
+            <v-btn to="/contracts">Contracts</v-btn>
+            <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Submit Request</v-btn>
+            <v-btn to="/shipping">Shipping</v-btn>
+            <v-btn to="/buying">Buying</v-btn>
+            <v-btn to="/calendar">Calendar</v-btn>
+            <v-btn to="/ore-calc">Ore Calculator</v-btn>
+            <v-btn to="/share-calc">Share Calculator</v-btn>
+            <!-- <v-menu>
             <template v-slot:activator="{on}">
               <v-btn v-on="on">Manage</v-btn>
             </template>
@@ -34,15 +37,14 @@
                 <router-link to="/myorg">Organization</router-link>
               </v-list-tile>
             </v-list>
-          </v-menu>-->
-        </v-toolbar-items>
+            </v-menu>-->
+          </v-toolbar-items>
+          <v-spacer></v-spacer>
+        <!-- </template> -->
         <v-spacer></v-spacer>
-      </template>
-      <v-spacer></v-spacer>
-      <v-toolbar-side-icon></v-toolbar-side-icon>
-      </v-app-bar>
-
-    <!-- </v-toolbar> -->
+        <!-- <v-toolbar-side-icon></v-toolbar-side-icon> -->
+      <!-- </v-app-bar> -->
+    </v-toolbar>
   </div>
 </template>
 

@@ -33,6 +33,21 @@ const routes = [
     name: 'contracts',
     component: () => import(/* webpackChunkName: "contracts" */ '../views/Contracts.vue')
   },
+  {
+    path: '/buying',
+    name: 'buying',
+    component: () => import(/* webpackChunkName: "buying" */ '../views/Buying.vue')
+  },
+  {
+    path: '/ore-calc',
+    name: 'ore-calc',
+    component: () => import(/* webpackChunkName: "ore-calc" */ '../views/OreCalc.vue')
+  },
+  {
+    path: '/shipping',
+    name: 'shipping',
+    component: () => import(/* webpackChunkName: "shipping" */ '../views/Shipping.vue')
+  },
 ]
 
 const router = new VueRouter({

@@ -172,7 +172,7 @@ export default {
       this.output.sell = src.sell;
     },
     process() {
-      fetch("https://node1.squirrellogic.com/", {
+      fetch("https://api.squirrellogic.com/evepraisal", {
         method: "POST",
         mode: "cors",
         headers: {
@@ -184,9 +184,12 @@ export default {
         .then(res => res.json())
         // .then(res => res.text())
         .then(res => {
-          this.setPrices(res.src);
-          this.updateModifiers();
-          this.returned = true;
+          if (res.src) {
+            this.setPrices(res.src);
+            this.updateModifiers();
+            this.returned = true;
+          }
+          
         });
     }
   }
