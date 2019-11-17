@@ -1,11 +1,6 @@
 <template>
   <v-app>
-    <v-toolbar>
-      <!-- <v-app-bar> -->
-        <Topbar />
-      <!-- </v-app-bar> -->
-    </v-toolbar>
-
+    <Topbar />
     <v-content>
       <router-view />
     </v-content>
@@ -13,7 +8,7 @@
 </template>
 
 <script>
-import Topbar from "./components/Topbar.vue";
+import Topbar from "@/components/Topbar.vue";
 
 export default {
   name: "App",
