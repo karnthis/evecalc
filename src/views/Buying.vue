@@ -1,7 +1,7 @@
 <template>
-  <div class="about text-center">
+  <div class="buy text-center">
     <img alt="Vue logo" src="../assets/sh-logo.png">
-    <Soon pagename="About Us"/>
+    <Soon pagename="Buying Page"/>
   </div>
 </template>
 
@@ -10,7 +10,7 @@
 import Soon from '@/components/Soon.vue'
 
 export default {
-  name: 'about',
+  name: 'buy',
   components: {
     Soon
   }

@@ -52,7 +52,7 @@
                 <v-card class="blue lighten-4">
                   <v-card-text>
                     <v-textarea
-                      rows="6"
+                      rows="20"
                       id="calcField"
                       placeholder="Paste Here"
                       class="blue lighten-3"
@@ -77,24 +77,24 @@
                 <v-row>
                   <v-col>
                     <v-list-item>
-                      <v-list-item-title>Total Buy: {{ prettyTotals(output.buy) }}</v-list-item-title>
+                      <v-list-item-title>Total Buy: {{ prettyTotals(output.buy).toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Total Sell: {{ prettyTotals(output.sell) }}</v-list-item-title>
+                      <v-list-item-title>Total Sell: {{ prettyTotals(output.sell).toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Adjusted Value: {{ output.adjusted }}</v-list-item-title>
+                      <v-list-item-title>Adjusted Value: {{ output.adjusted.toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                   </v-col>
                   <v-col>
                     <v-list-item>
-                      <v-list-item-title>Final Total: {{ output.total }}</v-list-item-title>
+                      <v-list-item-title>Final Total: {{ output.total.toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Per Share: {{ output.perShare }}</v-list-item-title>
+                      <v-list-item-title>Per Share: {{ output.perShare.toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                     <v-list-item>
-                      <v-list-item-title>Total Corp Tax: {{ output.taxTotal }}</v-list-item-title>
+                      <v-list-item-title>Total Corp Tax: {{ output.taxTotal.toLocaleString() }}</v-list-item-title>
                     </v-list-item>
                     <!-- <v-list-item>
                       <v-list-item-title>Total Test: {{ output.buy }}</v-list-item-title>
@@ -184,9 +184,12 @@ export default {
         .then(res => res.json())
         // .then(res => res.text())
         .then(res => {
-          this.setPrices(res.src);
-          this.updateModifiers();
-          this.returned = true;
+          if (res.src) {
+            this.setPrices(res.src);
+            this.updateModifiers();
+            this.returned = true;
+          }
+          
         });
     }
   }
