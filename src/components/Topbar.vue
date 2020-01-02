@@ -8,13 +8,53 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn to="/">Home</v-btn>
-        <v-btn to="/contracts">Contracts</v-btn>
-        <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Submit Request</v-btn>
-        <v-btn to="/shipping">Shipping</v-btn>
-        <v-btn to="/buying">Buying</v-btn>
-        <v-btn to="/calendar">Calendar</v-btn>
-        <v-btn to="/ore-calc">Ore Calculator</v-btn>
-        <v-btn to="/share-calc">Share Calculator</v-btn>
+        <v-btn href="https://discord.gg/hMV447y" target="_blank">Discord</v-btn>
+        <v-btn href="https://seat.atomicbear.com" target="_blank">EVESEAT</v-btn>
+        <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Shipping Request</v-btn>
+        <v-btn to="/buying">Buyback</v-btn>
+
+        <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on">Calculators</v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-btn to="/ore-calc">Ore Calculator</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn to="/share-calc">Share Calculator</v-btn>
+            </v-list-item>
+          </v-list>
+        </v-menu>
+
+        <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on">Resources</v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-btn href="https://google.com" target="_blank">Resource 1</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn to="/subway">Hisec Map</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://www.pathfinder-w.space/" target="_blank">Pathfinder</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://evepraisal.com/" target="_blank">EVEPraisal</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://eveeye.com/" target="_blank">EVE Eye</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="http://evemaps.dotlan.net/" target="_blank">Dotlan</v-btn>
+            </v-list-item>
+          </v-list>
+        </v-menu>
       </v-toolbar-items>
     </v-toolbar>
   </div>
@@ -26,6 +66,7 @@
 
 export default {
   name: "topbar",
+  data: () => ({}),
   methods: {
     // ...mapActions(["fetchTodos", "deleteTodo", "updateTodo"]),
     onDblClick(todo) {

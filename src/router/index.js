@@ -24,11 +24,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "share-calc" */ '../views/ShareCalc.vue')
   },
   {
-    path: '/calendar',
-    name: 'calendar',
-    component: () => import(/* webpackChunkName: "calendar" */ '../views/Calendar.vue')
-  },
-  {
     path: '/contracts',
     name: 'contracts',
     component: () => import(/* webpackChunkName: "contracts" */ '../views/Contracts.vue')

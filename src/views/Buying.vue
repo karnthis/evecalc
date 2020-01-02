@@ -1,7 +1,6 @@
 <template>
   <div class="buy text-center">
-    <img alt="Vue logo" src="../assets/sh-logo.png">
-    <Soon pagename="Buying Page"/>
+    <Soon pagename="Buyback Page"/>
   </div>
 </template>
 

@@ -1,6 +1,5 @@
 <template>
   <div class="oreCalc text-center">
-    <img alt="Vue logo" src="../assets/sh-logo.png">
     <Soon pagename="Ore Calculator"/>
   </div>
 </template>

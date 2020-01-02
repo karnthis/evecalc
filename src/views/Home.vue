@@ -1,6 +1,5 @@
 <template>
   <div class="home text-center">
-    <img alt="Vue logo" src="../assets/sh-logo.png">
     <Soon pagename="Homepage"/>
   </div>
 </template>
