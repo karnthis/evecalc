@@ -16,6 +16,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "buying" */ '../views/Buying.vue')
   },
   {
+    path: '/buyback-calc',
+    name: 'buyback-calc',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/BuybackCalc.vue')
+  },
+  {
     path: '/ore-calc',
     name: 'ore-calc',
     component: () => import(/* webpackChunkName: "ore-calc" */ '../views/OreCalc.vue')

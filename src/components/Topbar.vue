@@ -19,6 +19,9 @@
           </template>
           <v-list>
             <v-list-item>
+              <v-btn to="/buyback-calc">Buyback Calculator</v-btn>
+            </v-list-item>
+            <v-list-item>
               <v-btn to="/ore-calc">Ore Calculator</v-btn>
             </v-list-item>
             <v-list-item>
