@@ -11,16 +11,16 @@
         <v-btn href="https://discord.gg/hMV447y" target="_blank">Discord</v-btn>
         <v-btn href="https://seat.atomicbear.com" target="_blank">EVESEAT</v-btn>
         <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Shipping Request</v-btn>
-        <v-btn to="/buying">Buyback</v-btn>
+        <v-btn to="/buyback">Buyback</v-btn>
 
         <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
           <template v-slot:activator="{ on }">
             <v-btn v-on="on">Calculators</v-btn>
           </template>
           <v-list>
-            <v-list-item>
+            <!-- <v-list-item>
               <v-btn to="/buyback-calc">Buyback Calculator</v-btn>
-            </v-list-item>
+            </v-list-item> -->
             <v-list-item>
               <v-btn to="/ore-calc">Ore Calculator</v-btn>
             </v-list-item>

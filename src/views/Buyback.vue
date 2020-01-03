@@ -1,34 +1,5 @@
 <template>
   <v-container>
-    <!-- <v-content>
-      <v-card class="justify-center">
-        <v-card-title class="justify-center">
-          <span>Buyback Instructions</span>
-        </v-card-title>
-        <v-card-text class="text-left">
-          Superhumans offers buyback of most goods at 90 percent Jita Buy for:
-          <ul>
-            <li>Blue/Red Loot</li>
-            <li>Officer Personal Effects</li>
-            <li>Salvage</li>
-            <li>Trig research/salvage/materials</li>
-            <li>data relic research components</li>
-            <li>WH Gas</li>
-            <li>bling modules</li>
-            <li>metal scraps</li>
-          </ul>
-          For Ore (Basic Ore, Ice, And Moon Goo) Send a Normal Evepraisal to Razeleao, or Mesmashes. An appropriate price will be generated from the mineral price (This prevents us from underpaying for manipulated ores, and minerals are harder to manipulate). This Process will be revamped soon.
-          
-          Follow the below steps to create a new Buyback request:
-          <ol>
-            <li>Paste your items in the field and hit calculate</li>
-            <li>Create a contract to Superhuman And Associates</li>
-            <li>Set the price equal to the Buyback Total</li>
-            <li>Set Expiration to 4 Weeks</li>
-          </ol>
-        </v-card-text>
-      </v-card>
-    </v-content>-->
     <v-content>
       <v-row>
         <v-container fluid fill-height>
@@ -59,7 +30,6 @@
                 </ol></p>
               </v-card-text>
             </v-card>
-            <!-- <v-row class="justify-end"> -->
             <v-card class="blue lighten-4">
               <v-card-text>
                 <v-textarea
@@ -74,8 +44,6 @@
                 <v-btn @click="process">Calculate</v-btn>
               </v-card-actions>
             </v-card>
-            <!-- </v-row>
-            <v-row class="justify-start">-->
             <v-card class="green lighten-4" v-show="returned">
               <v-card-text>
                 <v-row>
@@ -90,7 +58,6 @@
                 </v-row>
               </v-card-text>
             </v-card>
-            <!-- </v-row> -->
           </v-layout>
         </v-container>
       </v-row>

@@ -11,15 +11,15 @@ const routes = [
     component: Home
   },
   {
-    path: '/buying',
-    name: 'buying',
-    component: () => import(/* webpackChunkName: "buying" */ '../views/Buying.vue')
+    path: '/buyback',
+    name: 'buyback',
+    component: () => import(/* webpackChunkName: "buyback" */ '../views/Buyback.vue')
   },
-  {
-    path: '/buyback-calc',
-    name: 'buyback-calc',
-    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/BuybackCalc.vue')
-  },
+  // {
+  //   path: '/buyback-calc',
+  //   name: 'buyback-calc',
+  //   component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/BuybackCalc.vue')
+  // },
   {
     path: '/ore-calc',
     name: 'ore-calc',
