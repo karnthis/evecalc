@@ -21,8 +21,9 @@
                   <li>Metal scraps</li>
                 </ul></p>
                 <p>For Ore (Basic Ore, Ice, And Moon Goo) Send a Normal Evepraisal to Razeleao, or Mesmashes. An appropriate price will be generated from the mineral price (This prevents us from underpaying for manipulated ores, and minerals are harder to manipulate). This Process will be revamped soon.</p>
-                <p>Follow the below steps to create a new Buyback request:
+                <p>Follow the below steps to create a new Non-Ore Buyback request:
                 <ol>
+                  <li>Make sure all items are in one of the Superhumans controlled Ports (Red, Blue, Green) or Outposts</li>
                   <li>Paste your items in the field and hit calculate</li>
                   <li>Create a contract to Superhuman And Associates</li>
                   <li>Set the price equal to the Buyback Total</li>
