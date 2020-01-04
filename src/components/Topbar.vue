@@ -9,7 +9,7 @@
       <v-toolbar-items>
         <v-btn to="/">Home</v-btn>
         <v-btn href="https://discord.gg/hMV447y" target="_blank">Discord</v-btn>
-        <v-btn href="https://seat.atomicbear.com" target="_blank">EVESEAT</v-btn>
+        <v-btn href="https://seat.superhumans.space" target="_blank">EVESEAT</v-btn>
         <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Shipping Request</v-btn>
         <v-btn to="/buyback">Buyback</v-btn>
 
