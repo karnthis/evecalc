@@ -35,7 +35,38 @@ const routes = [
     name: 'subway',
     component: () => import(/* webpackChunkName: "subway" */ '../views/Subway.vue')
   },
+  {
+    path: '/resource1',
+    name: 'resource1',
+    component: () => import(/* webpackChunkName: "resource1" */ '../views/Resource1.vue') 
+  },
+  {
+    path: '/eaveseat',
+    name: 'eaveseat',
+    component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eaveseat.vue') 
+  },
+  {
+    path: '/discord',
+    name: 'discord',
+    component: () => import(/* webpackChunkName: "discord" */ '../views/Discord.vue') 
+  },
+  {
+    path: '/evepraisal',
+    name: 'evepraisal',
+    component: () => import(/* webpackChunkName: "evepraisal" */ '../views/Evepraisal.vue') 
+  },
+  {
+    path: '/eveeye',
+    name: 'eveeye',
+    component: () => import(/* webpackChunkName: "eveeye" */ '../views/Eveeye.vue') 
+  },
+  {
+    path: '/request',
+    name: 'request',
+    component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
+  },
 ]
+
 
 const router = new VueRouter({
   routes

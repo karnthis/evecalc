@@ -8,9 +8,9 @@
       <v-spacer></v-spacer>
       <v-toolbar-items>
         <v-btn to="/">Home</v-btn>
-        <v-btn href="https://discord.gg/hMV447y" target="_blank">Discord</v-btn>
-        <v-btn href="https://seat.superhumans.space" target="_blank">EVESEAT</v-btn>
-        <v-btn href="https://forms.gle/fwzU3Yu9YBgvbnos6" target="_blank">Shipping Request</v-btn>
+        <v-btn to="/discord">Discord</v-btn>
+        <v-btn to="/eaveseat">EVESEAT</v-btn>
+        <v-btn to="/request">Shipping Request</v-btn>
         <v-btn to="/buyback">Buyback</v-btn>
 
         <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
@@ -36,7 +36,7 @@
           </template>
           <v-list>
             <v-list-item>
-              <v-btn href="https://google.com" target="_blank">Resource 1</v-btn>
+              <v-btn to="/Resource1">Resource #1</v-btn>
             </v-list-item>
             <v-list-item>
               <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
@@ -48,10 +48,10 @@
               <v-btn href="https://www.pathfinder-w.space/" target="_blank">Pathfinder</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn href="https://evepraisal.com/" target="_blank">EVEPraisal</v-btn>
+              <v-btn to="/evepraisal">EVEPraisal</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn href="https://eveeye.com/" target="_blank">EVE Eye</v-btn>
+              <v-btn to="/eveeye">EVE Eye</v-btn>
             </v-list-item>
             <v-list-item>
               <v-btn href="http://evemaps.dotlan.net/" target="_blank">Dotlan</v-btn>
