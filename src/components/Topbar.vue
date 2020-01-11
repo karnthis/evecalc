@@ -36,9 +36,6 @@
           </template>
           <v-list>
             <v-list-item>
-              <v-btn to="/Resource1">Resource #1</v-btn>
-            </v-list-item>
-            <v-list-item>
               <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
             </v-list-item>
             <v-list-item>
@@ -55,6 +52,9 @@
             </v-list-item>
             <v-list-item>
               <v-btn href="http://evemaps.dotlan.net/" target="_blank">Dotlan</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://forums.warptome.net/" target="_blank">WTM Incursions</v-btn>
             </v-list-item>
           </v-list>
         </v-menu>
