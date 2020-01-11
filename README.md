@@ -1,4 +1,4 @@
-# test-vue
+# Superhumans home
 
 ## Project setup
 ```

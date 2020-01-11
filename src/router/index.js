@@ -11,12 +11,19 @@ const routes = [
     component: Home
   },
   {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    path: '/buyback',
+    name: 'buyback',
+    component: () => import(/* webpackChunkName: "buyback" */ '../views/Buyback.vue')
+  },
+  // {
+  //   path: '/buyback-calc',
+  //   name: 'buyback-calc',
+  //   component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/BuybackCalc.vue')
+  // },
+  {
+    path: '/ore-calc',
+    name: 'ore-calc',
+    component: () => import(/* webpackChunkName: "ore-calc" */ '../views/OreCalc.vue')
   },
   {
     path: '/share-calc',
@@ -24,31 +31,42 @@ const routes = [
     component: () => import(/* webpackChunkName: "share-calc" */ '../views/ShareCalc.vue')
   },
   {
-    path: '/calendar',
-    name: 'calendar',
-    component: () => import(/* webpackChunkName: "calendar" */ '../views/Calendar.vue')
+    path: '/subway',
+    name: 'subway',
+    component: () => import(/* webpackChunkName: "subway" */ '../views/Subway.vue')
   },
   {
-    path: '/contracts',
-    name: 'contracts',
-    component: () => import(/* webpackChunkName: "contracts" */ '../views/Contracts.vue')
+    path: '/resource1',
+    name: 'resource1',
+    component: () => import(/* webpackChunkName: "resource1" */ '../views/Resource1.vue') 
   },
   {
-    path: '/buying',
-    name: 'buying',
-    component: () => import(/* webpackChunkName: "buying" */ '../views/Buying.vue')
+    path: '/eaveseat',
+    name: 'eaveseat',
+    component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eaveseat.vue') 
   },
   {
-    path: '/ore-calc',
-    name: 'ore-calc',
-    component: () => import(/* webpackChunkName: "ore-calc" */ '../views/OreCalc.vue')
+    path: '/discord',
+    name: 'discord',
+    component: () => import(/* webpackChunkName: "discord" */ '../views/Discord.vue') 
   },
   {
-    path: '/shipping',
-    name: 'shipping',
-    component: () => import(/* webpackChunkName: "shipping" */ '../views/Shipping.vue')
+    path: '/evepraisal',
+    name: 'evepraisal',
+    component: () => import(/* webpackChunkName: "evepraisal" */ '../views/Evepraisal.vue') 
+  },
+  {
+    path: '/eveeye',
+    name: 'eveeye',
+    component: () => import(/* webpackChunkName: "eveeye" */ '../views/Eveeye.vue') 
+  },
+  {
+    path: '/request',
+    name: 'request',
+    component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
   },
 ]
+
 
 const router = new VueRouter({
   routes
