@@ -31,13 +31,13 @@
                 </ol></p>
               </v-card-text>
             </v-card>
-            <v-card class="blue lighten-4">
+            <v-card class="grey darken-3">
               <v-card-text>
                 <v-textarea
                   rows="20"
                   id="calcField"
                   placeholder="Paste Here"
-                  class="blue lighten-3"
+                  class="grey darken-4"
                 ></v-textarea>
               </v-card-text>
               <v-card-actions>

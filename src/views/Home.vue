@@ -9,8 +9,8 @@
           </v-card-title>
           <v-card-text class="text-left">
             <p>Ø We're based in Hi-Sec and have no minimum skill point requirement.</p>
-            <p>Ø We Mainly Do Invasions and WH day-trips for ISK.</p>
-            <p>Ø Lowsec and Wormhole PvP</p>
+            <p>Ø We Mainly Do Triglavian Invasions and Exploration for ISK.</p>
+            <p>Ø Lowsec PvP</p>
             <p>Ø NPSI fleets are also encouraged</p>
             <p>Ø Small corporation: This means you get to know everyone and are not just a number.</p>
             <p>Ø <a href="https://evewho.com/corporation/98530505" target="_blank">Check our EveWho</a>
