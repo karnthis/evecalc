@@ -56,24 +56,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
   },
   {
-    path: '/zkillboard',
-    name: 'zkillboard',
-    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Zkill.vue')
-  },
-  {
-    path: '/pathfinder',
-    name: 'pathfinder',
-    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/PathfinderW.vue')
-  },
-  {
     path: '/dotlan',
     name: 'dotlan',
     component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Dotlan.vue')
-  },
-  {
-    path: '/warptome',
-    name: 'warptome',
-    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/WarpToMe.vue')
   },
   // {
   //   path: '/querytest',
