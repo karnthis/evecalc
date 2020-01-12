@@ -1,6 +1,6 @@
 <template>
   <div id="soon">
-    <img alt="Vue logo" src="../assets/sh-logo.png">
+    <v-img contain height="128px" src="../assets/sh-logo.png"></v-img>
     <h2> {{ pagename }} </h2>
     <h3>Coming Soon...</h3>
   </div>
