@@ -1,21 +1,17 @@
 <template>
-  <div class="eveeye text-center">
-    <v-container fluid fill-height>
-      <v-layout align-center justify-center>
-    <iframe src="https://eveeye.com/" style="width: 80%; height: 1000px; border:none;"></iframe>
-      </v-layout>
-    </v-container>
+  <div class="eveeye">
+    <Iframe pagename="eveeye.com"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import Soon from '@/components/Soon.vue'
+import Iframe from '@/components/Iframe.vue'
 
 export default {
-  name: "Eveeye",
+  name: "eveeye",
   components: {
-    // Soon
+    Iframe
   }
 };
 </script>

@@ -5,7 +5,7 @@
         <v-container fluid fill-height>
           <v-layout align-center justify-center>
             <v-row>
-              <v-card class="purple lighten-4">
+              <v-card class="grey darken-3">
                 <v-card-title>
                   <span>Settings:</span>
                 </v-card-title>
@@ -34,28 +34,28 @@
                   </v-col>
                   <v-col>
                     <v-subheader class="pl-0"># of Shares</v-subheader>
-                    <v-text-field v-model="shares" solo dense label="# of Shares"></v-text-field>
+                    <v-text-field v-model="shares" rounded solo dense label="# of Shares"></v-text-field>
                   </v-col>
                 </v-card-text>
                 <v-card-actions>
                   <v-row justify="space-between">
-                    <v-btn class="red lighten-3" @click="resetModifiers">Reset Modifiers</v-btn>
+                    <v-btn class="red darken-3" @click="resetModifiers">Reset Modifiers</v-btn>
                     <v-btn
                       justify-center
-                      class="green lighten-3"
+                      class="green darken-3"
                       @click="updateModifiers"
                     >Update Modifiers</v-btn>
                   </v-row>
                 </v-card-actions>
               </v-card>
               <v-flex xs12 sm8 md4>
-                <v-card class="blue lighten-4">
+                <v-card class="grey darken-3">
                   <v-card-text>
                     <v-textarea
                       rows="20"
                       id="calcField"
                       placeholder="Paste Here"
-                      class="blue lighten-3"
+                      class="grey darken-4"
                     ></v-textarea>
                   </v-card-text>
                   <v-card-actions>
@@ -72,7 +72,7 @@
       <v-row v-if="returned">
         <v-container fluid fill-height>
           <v-layout align-center justify-center>
-            <v-card class="green lighten-4">
+            <v-card class="grey darken-2">
               <v-card-text>
                 <v-row>
                   <v-col>

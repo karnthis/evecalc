@@ -9,7 +9,7 @@
       <v-toolbar-items>
         <v-btn to="/">Home</v-btn>
         <v-btn to="/discord">Discord</v-btn>
-        <v-btn to="/eaveseat">EVESEAT</v-btn>
+        <v-btn to="/eveseat">EVESEAT</v-btn>
         <v-btn to="/request">Shipping Request</v-btn>
         <v-btn to="/buyback">Buyback</v-btn>
 
@@ -18,9 +18,6 @@
             <v-btn v-on="on">Calculators</v-btn>
           </template>
           <v-list>
-            <!-- <v-list-item>
-              <v-btn to="/buyback-calc">Buyback Calculator</v-btn>
-            </v-list-item> -->
             <v-list-item>
               <v-btn to="/ore-calc">Ore Calculator</v-btn>
             </v-list-item>
@@ -36,13 +33,7 @@
           </template>
           <v-list>
             <v-list-item>
-              <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
-            </v-list-item>
-            <v-list-item>
               <v-btn to="/subway">Hisec Map</v-btn>
-            </v-list-item>
-            <v-list-item>
-              <v-btn href="https://www.pathfinder-w.space/" target="_blank">Pathfinder</v-btn>
             </v-list-item>
             <v-list-item>
               <v-btn to="/evepraisal">EVEPraisal</v-btn>
@@ -51,7 +42,21 @@
               <v-btn to="/eveeye">EVE Eye</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn href="http://evemaps.dotlan.net/" target="_blank">Dotlan</v-btn>
+              <v-btn to="/dotlan" target="_blank">Dotlan</v-btn>
+            </v-list-item>
+          </v-list>
+          
+        </v-menu>
+        <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
+          <template v-slot:activator="{ on }">
+            <v-btn v-on="on">External Resources</v-btn>
+          </template>
+          <v-list>
+            <v-list-item>
+              <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://www.pathfinder-w.space/" target="_blank">Pathfinder</v-btn>
             </v-list-item>
             <v-list-item>
               <v-btn href="https://forums.warptome.net/" target="_blank">WTM Incursions</v-btn>

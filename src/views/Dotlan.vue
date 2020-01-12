@@ -1,6 +1,6 @@
 <template>
-  <div class="request">
-    <Iframe pagename="forms.gle/fwzU3Yu9YBgvbnos6"/>
+  <div class="dotlan">
+    <Iframe pagename="evemaps.dotlan.net"/>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import Iframe from '@/components/Iframe.vue'
 
 export default {
-  name: "request",
+  name: "dotlan",
   components: {
     Iframe
   }

@@ -1,21 +1,17 @@
 <template>
-  <div class="evepraisal text-center">
-    <v-container fluid fill-height>
-      <v-layout align-center justify-center>
-    <iframe src="https://evepraisal.com/" style="width: 80%; height: 1000px; border:none;"></iframe>
-      </v-layout>
-    </v-container>
+  <div class="evepraisal">
+    <Iframe pagename="evepraisal.com"/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-// import Soon from '@/components/Soon.vue'
+import Iframe from '@/components/Iframe.vue'
 
 export default {
-  name: "Evepraisal",
+  name: "evepraisal",
   components: {
-    // Soon
+    Iframe
   }
 };
 </script>

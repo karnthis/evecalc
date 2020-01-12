@@ -15,11 +15,6 @@ const routes = [
     name: 'buyback',
     component: () => import(/* webpackChunkName: "buyback" */ '../views/Buyback.vue')
   },
-  // {
-  //   path: '/buyback-calc',
-  //   name: 'buyback-calc',
-  //   component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/BuybackCalc.vue')
-  // },
   {
     path: '/ore-calc',
     name: 'ore-calc',
@@ -36,14 +31,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "subway" */ '../views/Subway.vue')
   },
   {
-    path: '/resource1',
-    name: 'resource1',
-    component: () => import(/* webpackChunkName: "resource1" */ '../views/Resource1.vue') 
-  },
-  {
-    path: '/eaveseat',
-    name: 'eaveseat',
-    component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eaveseat.vue') 
+    path: '/eveseat',
+    name: 'eveseat',
+    component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eveseat.vue') 
   },
   {
     path: '/discord',
@@ -65,8 +55,33 @@ const routes = [
     name: 'request',
     component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
   },
+  {
+    path: '/zkillboard',
+    name: 'zkillboard',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Zkill.vue')
+  },
+  {
+    path: '/pathfinder',
+    name: 'pathfinder',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/PathfinderW.vue')
+  },
+  {
+    path: '/dotlan',
+    name: 'dotlan',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Dotlan.vue')
+  },
+  {
+    path: '/warptome',
+    name: 'warptome',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/WarpToMe.vue')
+  },
+  // {
+  //   path: '/querytest',
+  //   name: 'querytest',
+  //   component: () => import(/* webpackChunkName: "request" */ '../views/querytest.vue'),
+  //   props: (route) => ({ query: route.query.p })
+  // },
 ]
-
 
 const router = new VueRouter({
   routes

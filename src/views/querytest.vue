@@ -1,6 +1,12 @@
 <template>
-  <div class="request">
-    <Iframe pagename="forms.gle/fwzU3Yu9YBgvbnos6"/>
+  <div class="home">
+    <v-card class="justify-center">
+      <v-card-text >
+        {{ query }}
+      </v-card-text>
+    </v-card>
+
+    <Iframe pagename="seat.superhumans.space"/>
   </div>
 </template>
 
@@ -9,7 +15,8 @@
 import Iframe from '@/components/Iframe.vue'
 
 export default {
-  name: "request",
+  name: "home",
+  props: ['query'],
   components: {
     Iframe
   }
