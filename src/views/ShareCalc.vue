@@ -5,7 +5,7 @@
         <v-container fluid fill-height>
           <v-layout align-center justify-center>
             <v-row>
-              <v-card class="grey darken-3">
+              <v-card class="grey darken-3" min-width="30%">
                 <v-card-title>
                   <span>Settings:</span>
                 </v-card-title>
@@ -38,7 +38,7 @@
                   </v-col>
                 </v-card-text>
                 <v-card-actions>
-                  <v-row justify="space-between">
+                  <v-row justify="center">
                     <v-btn class="red darken-3" @click="resetModifiers">Reset Modifiers</v-btn>
                     <v-btn
                       justify-center
