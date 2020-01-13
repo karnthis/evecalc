@@ -1,10 +1,12 @@
 <template>
   <div class="home">
+    <v-layout align-center justify-center>
     <v-card class="justify-center">
       <v-card-text >
         <img alt="Vue logo" src="../assets/Eve_Subway_Map_Short.jpg" />
       </v-card-text>
     </v-card>
+    </v-layout>
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
