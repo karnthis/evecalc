@@ -2,7 +2,8 @@
   <div class="home text-center">
     <v-container fluid fill-height>
       <v-layout align-center justify-center>
-        <v-card class="justify-center">
+        <v-card class="justify-center" height=70vh>
+        <br />
           <v-img contain height="128px" src="../assets/sh-logo.png"></v-img>
           <v-card-title class="justify-center">
             <span>Welcome</span>
@@ -28,6 +29,7 @@
   </div>
 </template>
 
+
 <script>
 // @ is an alias to /src
 // import Soon from '@/components/Soon.vue'
@@ -39,7 +41,6 @@ export default {
   }
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 </style>

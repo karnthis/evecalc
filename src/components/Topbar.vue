@@ -1,12 +1,12 @@
 <template>
   <div id="topbar">
-    <v-toolbar dense fixed>
-      <v-toolbar-title class="headline text-uppercase">
+    <v-app-bar dense fixed>
+      <v-app-bar-title class="headline text-uppercase">
         <span>EVE|</span>
         <span class="font-weight-light">Superhuman Scouts</span>
-      </v-toolbar-title>
+      </v-app-bar-title>
       <v-spacer></v-spacer>
-      <v-toolbar-items>
+      <v-app-bar-items>
         <v-btn to="/">Home</v-btn>
         <v-btn to="/discord">Discord</v-btn>
         <v-btn to="/eveseat">EVESEAT</v-btn>
@@ -63,8 +63,8 @@
             </v-list-item>
           </v-list>
         </v-menu>
-      </v-toolbar-items>
-    </v-toolbar>
+      </v-app-bar-items>
+    </v-app-bar>
   </div>
 </template>
 
@@ -101,6 +101,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.btn {padding-left: 2px; } /*attempted to add some space betwix these buttons*/
+
 /* #topbar {
   padding: 10px;
   background-color: limegreen;
