@@ -60,6 +60,11 @@ const routes = [
     name: 'dotlan',
     component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Dotlan.vue')
   },
+  {
+    path: '/legal',
+    name: 'legal',
+    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Legal.vue')
+  },
   // {
   //   path: '/querytest',
   //   name: 'querytest',

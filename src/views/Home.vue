@@ -2,7 +2,7 @@
   <div class="home text-center">
     <v-container fluid fill-height>
       <v-layout align-center justify-center>
-        <v-card class="justify-center" height=70vh>
+        <v-card class="justify-center" min-height=70vh>
         <br />
           <v-img contain height="128px" src="../assets/sh-logo.png"></v-img>
           <v-card-title class="justify-center">
