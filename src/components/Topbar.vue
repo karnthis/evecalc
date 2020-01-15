@@ -1,8 +1,9 @@
 <template>
   <div id="topbar">
     <v-app-bar dense fixed>
+      <v-img class="pr-4" contain max-width="90px" src="../assets/eve-online-logo.png"></v-img>
       <v-app-bar-title class="headline text-uppercase">
-        <span>EVE|</span>
+<!--- <span>EVE|</span> -->
         <span class="font-weight-light">Superhuman Scouts</span>
       </v-app-bar-title>
       <v-spacer></v-spacer>
