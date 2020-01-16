@@ -3,7 +3,7 @@
     <v-layout align-center justify-center>
     <v-card class="justify-center">
       <v-card-text >
-        <img alt="Vue logo" src="../assets/EveSubwayMap_Pro.jpg" />
+        <img alt="Vue logo" src="../assets/EveSubwayMapPro.jpg" />
       </v-card-text>
     </v-card>
     </v-layout>
