@@ -4,7 +4,7 @@
       <v-row>
         <v-container fluid fill-height>
           <v-layout align-center justify-center>
-            <v-card class="justify-center" max-width="450">
+            <v-card class="justify-center" min-width="30%" max-width="450" min-height="650">
               <v-card-title class="justify-center">
                 <span>Buyback Instructions</span>
               </v-card-title>
@@ -24,6 +24,8 @@
                 <p>Follow the below steps to create a new Non-Ore Buyback request:
                 <ol>
                   <li>Make sure all items are in one of the Superhumans controlled Ports (Red, Blue, Green) or Outposts</li>
+                  <li>Put your Item window into LIST Mode</li>
+                  <li>Copy all items you wish to sell</li>
                   <li>Paste your items in the field and hit calculate</li>
                   <li>Create a contract to Superhuman And Associates</li>
                   <li>Set the price equal to the Buyback Total</li>
@@ -31,9 +33,10 @@
                 </ol></p>
               </v-card-text>
             </v-card>
-            <v-card class="grey darken-3">
+            <v-card min-width="450" min-height="650" class="justify-center grey darken-3">
               <v-card-text>
                 <v-textarea
+                  height="500"
                   rows="20"
                   id="calcField"
                   placeholder="Paste Here"
