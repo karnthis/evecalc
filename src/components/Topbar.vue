@@ -42,9 +42,6 @@
             <v-list-item>
               <v-btn to="/eveeye">EVE Eye</v-btn>
             </v-list-item>
-            <v-list-item>
-              <v-btn to="/dotlan" target="_blank">Dotlan</v-btn>
-            </v-list-item>
           </v-list>
           
         </v-menu>
@@ -61,6 +58,9 @@
             </v-list-item>
             <v-list-item>
               <v-btn href="https://forums.warptome.net/" target="_blank">WTM Incursions</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://evemaps.dotlan.net/" target="_blank">Dotlan</v-btn>
             </v-list-item>
           </v-list>
         </v-menu>

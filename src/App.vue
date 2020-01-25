@@ -7,8 +7,9 @@
     src="./assets/Eve-online-wallpaper.jpg">
       <router-view />
       </v-parallax>
-     <span style="color: #9494b8"> All Eve Related Materials are property of CCP Games. <router-link to="/legal"> See Legal Notice</router-link>.</span>
+     
     </v-content>
+    <v-footer padless absolute class="#9494b8"> All Eve Related Materials are property of CCP Games. <router-link to="/legal"> See Legal Notice</router-link>.</v-footer>
   </v-app>
 </template>
 
