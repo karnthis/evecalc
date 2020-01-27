@@ -10,9 +10,6 @@
       <v-app-bar-items>
         <v-btn to="/">Home</v-btn>
         <v-btn to="/discord">Discord</v-btn>
-        <v-btn to="/eveseat">EVESEAT</v-btn>
-        <v-btn to="/request">Shipping Request</v-btn>
-        <v-btn to="/buyback">Buyback</v-btn>
 
         <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
           <template v-slot:activator="{ on }">
@@ -37,10 +34,13 @@
               <v-btn to="/subway">Hisec Map</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn to="/evepraisal">EVEPraisal</v-btn>
+              <v-btn href="https://seat.superhumans.space/" target="_blank">EVESEAT</v-btn>
             </v-list-item>
             <v-list-item>
-              <v-btn to="/eveeye">EVE Eye</v-btn>
+              <v-btn to="/request">Shipping Request</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn to="/buyback">Buyback</v-btn>
             </v-list-item>
           </v-list>
           
@@ -50,6 +50,12 @@
             <v-btn v-on="on">External Resources</v-btn>
           </template>
           <v-list>
+            <v-list-item>
+              <v-btn href="https://evepraisal.com/" target="_blank">EVEPraisal</v-btn>
+            </v-list-item>
+            <v-list-item>
+              <v-btn href="https://eveeye.com/" target="_blank">EVE Eye</v-btn>
+            </v-list-item>
             <v-list-item>
               <v-btn href="https://zkillboard.com/" target="_blank">zKillboard</v-btn>
             </v-list-item>

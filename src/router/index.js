@@ -30,36 +30,36 @@ const routes = [
     name: 'subway',
     component: () => import(/* webpackChunkName: "subway" */ '../views/Subway.vue')
   },
-  {
-    path: '/eveseat',
-    name: 'eveseat',
-    component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eveseat.vue') 
-  },
+  // {
+  //   path: '/eveseat',
+  //   name: 'eveseat',
+  //   component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eveseat.vue') 
+  // },
   {
     path: '/discord',
     name: 'discord',
     component: () => import(/* webpackChunkName: "discord" */ '../views/Discord.vue') 
   },
-  {
-    path: '/evepraisal',
-    name: 'evepraisal',
-    component: () => import(/* webpackChunkName: "evepraisal" */ '../views/Evepraisal.vue') 
-  },
-  {
-    path: '/eveeye',
-    name: 'eveeye',
-    component: () => import(/* webpackChunkName: "eveeye" */ '../views/Eveeye.vue') 
-  },
-  {
-    path: '/request',
-    name: 'request',
-    component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
-  },
-  {
-    path: '/dotlan',
-    name: 'dotlan',
-    component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Dotlan.vue')
-  },
+  // {
+  //   path: '/evepraisal',
+  //   name: 'evepraisal',
+  //   component: () => import(/* webpackChunkName: "evepraisal" */ '../views/Evepraisal.vue') 
+  // },
+  // {
+  //   path: '/eveeye',
+  //   name: 'eveeye',
+  //   component: () => import(/* webpackChunkName: "eveeye" */ '../views/Eveeye.vue') 
+  // },
+  // {
+  //   path: '/request',
+  //   name: 'request',
+  //   component: () => import(/* webpackChunkName: "request" */ '../views/Request.vue') 
+  // },
+  // {
+  //   path: '/dotlan',
+  //   name: 'dotlan',
+  //   component: () => import(/* webpackChunkName: "buyback-calc" */ '../views/Dotlan.vue')
+  // },
   {
     path: '/legal',
     name: 'legal',
