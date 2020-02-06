@@ -10,7 +10,7 @@
       <v-app-bar-items>
         <v-btn to="/">Home</v-btn>
         <v-btn to="/discord">Discord</v-btn>
-
+        <v-btn to="/eveseat">EVESEAT</v-btn>  
         <v-menu :open-on-hover="true" :close-on-click="true" :offset-y="true">
           <template v-slot:activator="{ on }">
             <v-btn v-on="on">Calculators</v-btn>

@@ -30,11 +30,11 @@ const routes = [
     name: 'subway',
     component: () => import(/* webpackChunkName: "subway" */ '../views/Subway.vue')
   },
-  // {
-  //   path: '/eveseat',
-  //   name: 'eveseat',
-  //   component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eveseat.vue') 
-  // },
+   {
+     path: '/eveseat',
+     name: 'eveseat',
+     component: () => import(/* webpackChunkName: "eaveseat" */ '../views/Eveseat.vue') 
+   },
   {
     path: '/discord',
     name: 'discord',

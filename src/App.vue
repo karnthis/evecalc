@@ -1,12 +1,10 @@
 <template>
   <v-app style="background: rgba(20,20,25,100);">
     <Topbar />
-    <v-content>
-      <v-parallax 
-    height="1000" 
-    src="./assets/Eve-online-wallpaper.jpg">
+    <v-content class= "pa-10">
+      <div class= "bg">
       <router-view />
-      </v-parallax>
+      </div>
      
     </v-content>
     <v-footer padless absolute class="#9494b8"> All Eve Related Materials are property of CCP Games. <router-link to="/legal"> See Legal Notice</router-link>.</v-footer>
@@ -30,7 +28,21 @@ export default {
 </script>
 
 <style>
+  body, html {
+    height: 100%;
+  }
+  .bg {
+    /* The image used */
+    background-image: url('~@/assets/Eve-online-wallpaper.jpg');
 
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 /* #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
